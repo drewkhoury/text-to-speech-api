@@ -1,0 +1,10 @@
+version: "3.9"
+services:
+  dev-workstation:
+    build: .
+    volumes:
+      - ./:/tmp
+    stdin_open: true
+    tty: true
+    environment:
+      - GOOGLE_APPLICATION_CREDENTIALS="${GOOGLE_APPLICATION_CREDENTIALS}"
